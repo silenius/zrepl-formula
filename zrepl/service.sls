@@ -20,7 +20,7 @@ sysrc_zrepl_group:
 sysrc_zrepl_config:
   sysrc.managed:
     - name: zrepl_config
-    - value: {{ zrepl.config }}
+    - value: {{ zrepl.config_file }}
     - watch_in:
       - service: zrepl
 
