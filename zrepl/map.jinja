@@ -1,0 +1,5 @@
+{% import_yaml "zrepl/defaults.yaml" as defaults %}
+
+{% set zrepl = salt.pillar.get('zrepl') %}
+
+{% do zrepl.update(salt.slsutil.merge(defaults, zrepl.lookup)) %}
