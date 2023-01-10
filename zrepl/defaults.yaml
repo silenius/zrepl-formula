@@ -3,3 +3,10 @@ zrepl:
   user: root
   group: wheel
   config_file: /usr/local/etc/zrepl/zrepl.yml
+  config:
+    global:
+      control:
+        sockpath: /var/run/zrepl/control
+      serve:
+        stdinserver:
+          sockdir: /var/run/zrepl/stdinserver
