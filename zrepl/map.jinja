@@ -2,4 +2,4 @@
 
 {% set zrepl = salt.pillar.get('zrepl') %}
 
-{% do zrepl.update(salt.slsutil.merge(defaults, zrepl.lookup)) %}
+{% do zrepl.update(salt.slsutil.merge(defaults.zrepl, zrepl)) %}

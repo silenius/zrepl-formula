@@ -8,8 +8,8 @@ zrepl_config:
     - name: {{ zrepl.config_file }}
     - dataset_pillar: "zrepl:config"
     - serializer: yaml
-    - user: root
-    - group: wheel
+    - user: {{ zrepl.user }}
+    - group: {{ zrepl.group }}
     - mode: 644
     - require:
       - pkg: pkg_zrepl
