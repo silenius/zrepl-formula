@@ -1,3 +1,5 @@
+{% from "zrepl/map.jinja" import zrepl with context %}
+
 include:
   - zrepl.config
 
