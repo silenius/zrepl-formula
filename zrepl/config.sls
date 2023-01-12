@@ -36,3 +36,12 @@ zrepl_var_run:
       - mode
     - require:
       - file: zrepl_var_run_stdin
+
+zrepl_var_log:
+  file.managed:
+    - name: /var/log/zrepl.log
+    - user: {{ zrepl.user }}
+    - group: {{ zrepl.group }}
+    - mode: 640
+    - require:
+      - pkg: pkg_zrepl
