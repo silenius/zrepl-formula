@@ -28,6 +28,5 @@ service_zrepl:
   service.running:
     - name: zrepl
     - enable: True
-    - reload: True
     - watch:
       - file: zrepl_config
