@@ -45,3 +45,5 @@ zrepl_var_log:
     - mode: 640
     - require:
       - pkg: pkg_zrepl
+    - require_in:
+      - cmd: zrepl_restart_services
